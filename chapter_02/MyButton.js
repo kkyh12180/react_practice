@@ -3,7 +3,7 @@ function MyButton(props) {
 
     return React.createElement(
         'button',
-        { onClick : () => setIsClicked(True) },
+        { onClick : () => setIsClicked(true) },
         isClicked ? 'Clicked!' : 'Click here!'
     )
 }

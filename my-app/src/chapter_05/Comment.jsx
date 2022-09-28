@@ -47,7 +47,7 @@ function Comment(props) {
                 <span style={styles.commentText}>{props.comment}</span>
             </div>
         </div>
-    )
+    );
 }
 
 export default Comment;

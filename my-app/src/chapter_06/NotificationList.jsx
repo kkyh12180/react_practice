@@ -14,7 +14,7 @@ const reservedNotifications = [
         id: 3,
         message: "저녁먹고 땡",
     },
-]
+];
 
 var timer;
 
@@ -31,10 +31,11 @@ class NotificationList extends React.Component {
         const { notifications } = this.state;
 
         // 1초마다 reservedNotification을 가져와서 notifications 배열에 업데이트
-        timer = setInterval(() =>{
+        timer = setInterval( () => {
             if (notifications.length < reservedNotifications.length) {
                 const index = notifications.length;
                 notifications.push(reservedNotifications[index]);
+
                 this.setState({
                     notifications: notifications,
                 });
@@ -44,17 +45,16 @@ class NotificationList extends React.Component {
                 });
                 clearInterval(timer);
             }
-        }, 1000);
+        }, 3000);
     }
 
     render() {
         return (
             <div>
                 {this.state.notifications.map((notification) => {
-                    return <Notification 
-                        key={notification.id}
-                        id={notification.id}
-                        message={notification.message} />;
+                    return (
+                    <Notification key={notification.id} id={notification.id} message={notification.message} />
+                    );
                 })}
             </div>
         );

@@ -11,7 +11,7 @@ const styles = {
     },
     messageText: {
         color: 'black',
-        fontsize: 16,
+        fontSize: 16,
     },
 };
 
